@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.html",
   "scripts": {
-    "build": "npx @11ty/eleventy"
+    "build": "env NODE_ENV=production npx eleventy --pathprefix 'sinara-web'",
+    "serve": "npx @11ty/eleventy --serve",
+    "debug": "DEBUG=* npx @11ty/eleventy"
   },
   "keywords": [],
   "author": "emptywork",
