@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="./favicon.png" type="image/x-png">
+		<title>{{ title }} | Self-risk Assessment Kanker Serviks SINARA</title>
+
+		<style>
+			:root {
+				--main-color: #0C5192;
+				--background-color: #E5F9FF;
+			}
+			body {
+				padding: 2em;
+				margin: 0;
+				line-height: 1.5;
+				font-family: arial;
+				background-color: var(--background-color);
+			}
+
+			p {
+				width: min(65ch, 100%);
+			}
+
+			a {
+				color: var(--main-color);
+				text-underline-offset: 0.25em;
+			}
+
+			.breadcrumb {
+				color: var(--main-color);
+
+				a {
+					color: inherit;
+				}
+			}
+
+			content {
+				h1,
+				h2,
+				h3,
+				h4,
+				h5,
+				h6 {
+					line-height: 1;
+				}
+			}
+
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6,
+			strong {
+				color: var(--main-color);
+			}
+		</style>
+	</head>
+
+	<body>
+		<span class="breadcrumb">← 
+            <a href="/">Kembali ke halaman utama</a>
+		</span>
+		<content>
+			{{ content | safe }}
+		</content>
+	</body>
+
+</html>
