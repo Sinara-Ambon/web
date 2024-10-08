@@ -6,27 +6,29 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="{{ '../favicon.png' | url }}" type="image/x-png">
 		<title>{{ title }} | Self-risk Assessment Kanker Serviks SINARA</title>
-
+		{% if desc %}
+			<meta name="description" content="{{ desc }}">
+		{% else %}
+			<meta name="description" content="SINARA atau Self-Risk Assessement Kanker Serviks merupakan aplikasi untuk melakukan proses penilaian resiko diri terhadap penyakit Kanker Serviks secara digital.">
+		{% endif %}
+		<link rel="stylesheet" href="/assets/css/styles.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 		<style>
-			:root {
-				--main-color: #0C5192;
-				--background-color: #E5F9FF;
-			}
 			body {
 				padding: 2em;
 				margin: 0;
 				line-height: 1.5;
-				font-family: arial;
 				background-color: var(--background-color);
+			}
+
+			content {
+				padding: 0;
 			}
 
 			p {
 				width: min(65ch, 100%);
-			}
-
-			a {
-				color: var(--main-color);
-				text-underline-offset: 0.25em;
 			}
 
 			.breadcrumb {
@@ -37,36 +39,26 @@
 				}
 			}
 
-			content {
-				h1,
-				h2,
-				h3,
-				h4,
-				h5,
-				h6 {
-					line-height: 1;
-				}
+			nav {
+				margin: -2em -2em 0;
 			}
 
-			h1,
-			h2,
-			h3,
-			h4,
-			h5,
-			h6,
-			strong {
-				color: var(--main-color);
+			footer {
+				margin: 2em -2em -2em;
+				width: 100%;
 			}
 		</style>
 	</head>
 
 	<body>
+		{% include "navbar.njk" %}
 		<span class="breadcrumb">← 
-            <a href="/">Kembali ke halaman utama</a>
+			<a href="/">Kembali ke halaman utama</a>
 		</span>
 		<content>
 			{{ content | safe }}
 		</content>
+		{% include "footer.njk" %}
 	</body>
 
 </html>

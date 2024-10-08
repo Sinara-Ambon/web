@@ -1,0 +1,181 @@
+:root {
+  --main-color: #0c5192;
+  --background-color: #e5f9ff;
+
+  --accent-color: #3aa938;
+  --light-accent-color: #58b7d5;
+}
+
+body {
+  display: grid;
+  font-family: "Open Sans", sans-serif;
+  min-height: 100dvh;
+
+  content {
+    flex: 1 auto;
+  }
+}
+
+a {
+  transition: text-underline-offset 200ms ease-in-out;
+  color: var(--main-color);
+  text-underline-offset: 0.25em;
+}
+
+a:is(:hover, :focus) {
+  text-underline-offset: 0.4em;
+}
+
+content {
+  display: grid;
+  padding: 2em;
+}
+
+content {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1;
+  }
+
+  p {
+    width: min(65ch, 100%);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  color: var(--main-color);
+}
+
+h1 {
+  font-weight: 900;
+}
+
+.download {
+  width: 100%;
+  max-width: 9em;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 2em;
+  backdrop-filter: blur(10px);
+
+  .links {
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1em;
+
+    li {
+      list-style: none;
+    }
+  }
+
+  .brand {
+    display: flex;
+    align-content: flex-end;
+    flex-wrap: wrap;
+    gap: 0 0.5em;
+    font-weight: 900;
+    line-height: 1;
+    background-image: linear-gradient(
+      90deg,
+      var(--accent-color),
+      var(--main-color)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    .brand-title {
+      font-size: 2em;
+    }
+
+    .brand-subtitle {
+      font-style: italic;
+      font-weight: normal;
+      color: var(--light-accent-color);
+      -webkit-text-fill-color: var(--light-accent-color);
+      font-size: 0.8em;
+    }
+
+    .brand-subtitle-secondary {
+      text-transform: uppercase;
+      font-size: 0.78em;
+    }
+
+    ul {
+      display: grid;
+      align-items: end;
+      margin: 0;
+      padding: 0;
+
+      li {
+        list-style: none;
+      }
+    }
+  }
+}
+
+footer {
+  background-color: var(--light-accent-color);
+  width: calc(100% - 4em);
+  padding: 2em;
+
+  strong {
+    /* this for accessibility only */
+    color: #051e37;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    gap: 0 0.5em;
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      list-style: none;
+
+      img {
+        width: fit-content;
+        height: 3em;
+      }
+    }
+  }
+
+  a {
+    /* this for accessibility only */
+    color: #051e37;
+  }
+
+  p {
+    width: min(65ch, 100%);
+  }
+}
+
+@media screen and (max-width: 40em) {
+  nav {
+    .links {
+      display: none;
+    }
+  }
+}

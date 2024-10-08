@@ -1,6 +1,7 @@
 ---
 layout: secondary.njk
 title: Syarat dan Ketentuan Penggunaan
+desc: Syarat dan ketentuan penggunaan aplikasi SINARA
 ---
 
 # **Syarat dan Ketentuan Penggunaan Aplikasi SINARA**

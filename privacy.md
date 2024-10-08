@@ -1,6 +1,7 @@
 ---
 layout: secondary.njk
 title: Kebijakan Privasi
+desc: Kebijakan Privasi penggunaan SINARA
 ---
 
 # **Kebijakan Privasi SINARA**
