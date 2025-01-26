@@ -1,3 +1,20 @@
 {
-  "googlePlay": "#"
+  "googlePlay": "#",
+  "navigation": [
+    {
+      "longName": "Kebijakan Privasi Aplikasi",
+      "name": "Privasi",
+      "link": "/privacy"
+    },
+    {
+      "longName": "Syarat dan Ketentuan Penggunaan",
+      "name": "Syarat dan Ketentuan",
+      "link": "/terms"
+    },
+    {
+      "longName": "Hubungi Kami",
+      "name": "Hubungi Kami",
+      "link": "/contact"
+    }
+  ]
 }

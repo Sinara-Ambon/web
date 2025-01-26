@@ -14,7 +14,7 @@
     <strong>SINARA</strong> atau <i>Self-Risk Assessement</i> Kanker Serviks merupakan aplikasi untuk melakukan proses
     penilaian resiko diri terhadap penyakit Kanker Serviks secara digital.
   </p>
-  <h4 style="text-transform: uppercase; margin-bottom: 0;">Dengan Kerjasama dari</h4>
+  <h2 style="text-transform: uppercase; margin-bottom: 0; font-size: 1em;">Dengan Kerjasama dari</h2>
   <ul>
     <li>
       <a target="_blank" href="https://bima.kemdikbud.go.id/">BIMA</a>
@@ -32,13 +32,11 @@
     <strong>Hak Cipta &copy; 2024 - Devita Madiuw</strong>
   </p>
   <ul class="links">
+    {% for navigation in links.navigation %}
     <li>
-      <a href="{{ './privacy' | url }}">Kebijakan Privasi Aplikasi</a>
+      <a href="{{ navigation.link | url }}">{{ navigation.longName }}</a>
     </li>
-    <li>|</li>
-    <li>
-      <a href="{{ './terms' | url }}">Syarat dan Ketentuan Penggunaan</a>
-    </li>
+    {% endfor %}
   </ul>
   <p>Didukung oleh <a target="_blank" href="https://emptywork.my.id">Emptywork</a></p>
 </footer>
