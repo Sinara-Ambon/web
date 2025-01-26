@@ -65,16 +65,32 @@ h1 {
   max-width: 9em;
 }
 
+.banner {
+  width: min(60em, 100%);
+  filter: drop-shadow(0.5rem 0.5rem 1rem hwb(0 13% 87% / 0.1));
+  z-index: -1;
+  user-select: none;
+}
+
 nav {
-  display: flex;
-  justify-content: space-between;
+  padding: 2em;
   position: sticky;
-  align-items: center;
+  backdrop-filter: blur(10px);
   top: 0;
   left: 0;
   right: 0;
-  padding: 2em;
-  backdrop-filter: blur(10px);
+  .navbar-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+  }
+
+  .navbar-bottom {
+    .links {
+      display: none;
+    }
+  }
 
   .links {
     text-transform: uppercase;
@@ -82,15 +98,18 @@ nav {
     margin: 0;
     padding: 0;
     display: flex;
+    align-items: center;
     gap: 1em;
 
     li {
       list-style: none;
+      text-align: center;
     }
   }
 
   .brand {
     display: flex;
+    width: clamp(100%, 7.5rem);
     align-content: flex-end;
     flex-wrap: wrap;
     gap: 0 0.5em;
@@ -101,6 +120,7 @@ nav {
       var(--accent-color),
       var(--main-color)
     );
+    user-select: none;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -172,10 +192,30 @@ footer {
   }
 }
 
+@media screen and (max-width: 60em) {
+  nav {
+    .links {
+      display: none;
+    }
+
+    .navbar-bottom {
+      .links {
+        display: flex;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 40em) {
   nav {
     .links {
       display: none;
+    }
+
+    .navbar-bottom {
+      .links {
+        display: none;
+      }
     }
   }
 }
