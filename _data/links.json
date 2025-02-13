@@ -4,17 +4,17 @@
     {
       "longName": "Kebijakan Privasi Aplikasi",
       "name": "Privasi",
-      "link": "/privacy"
+      "link": "./privacy"
     },
     {
       "longName": "Syarat dan Ketentuan Penggunaan",
       "name": "Syarat dan Ketentuan",
-      "link": "/terms"
+      "link": "./terms"
     },
     {
       "longName": "Hubungi Kami",
       "name": "Hubungi Kami",
-      "link": "/contact"
+      "link": "./contact"
     }
   ]
 }
