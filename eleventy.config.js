@@ -4,6 +4,6 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("CNAME");
 
   eleventyConfig.addFilter('normalizedUrl', url => {
-    return url.replace("sinara-web", "")
+    return url.replace("/sinara-web", "")
   })
 };
