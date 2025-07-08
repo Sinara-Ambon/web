@@ -38,7 +38,7 @@
 		<ul>
 			{% for navigation in links.navigation %}
 			<li>
-				<a href="{{ navigation.link | url }}">{{ navigation.longName }}</a>
+				<a href="{{ navigation.link | url | normalizedUrl }}">{{ navigation.longName }}</a>
 			</li>
 			{% endfor %}
 		</ul>
