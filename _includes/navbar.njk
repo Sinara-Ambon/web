@@ -11,7 +11,7 @@
     <ul class="links">
       {% for navigation in links.navigation %}
       <li>
-        <a href="{{ navigation.link | url }}">{{ navigation.name }}</a>
+        <a href="{{ navigation.link }}">{{ navigation.name }}</a>
       </li>
       {% endfor %}
     </ul>

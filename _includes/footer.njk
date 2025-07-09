@@ -4,7 +4,7 @@
       <img src="/assets/images/logobima.png" alt="Logo BIMA" srcset="">
     </li>
     <li>
-      <img src="/assets/images/logokemendikbud.png" alt=" LOGO KEMENDIKBUD" srcset="">
+      <img src="/assets/images/logokemendikbud.png" alt="LOGO KEMENDIKBUD" srcset="">
     </li>
     <li>
       <img src="/assets/images/logoukim-150px.png" alt="LOGO UKIM" srcset="">
@@ -34,7 +34,7 @@
   <ul class="links">
     {% for navigation in links.navigation %}
     <li>
-      <a href="{{ navigation.link | url | normalizedUrl  }}">{{ navigation.longName }}</a>
+      <a href="{{ navigation.link }}">{{ navigation.longName }}</a>
     </li>
     {% endfor %}
   </ul>
